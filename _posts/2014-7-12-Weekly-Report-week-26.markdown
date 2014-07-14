@@ -15,7 +15,6 @@ Before I join Ericsson,I never thought that I would choosed a communication ente
 
 >I mistook that Ericsson are not fit for youth who should chase money rather than choosing a life of ease.However,I understand how important it to balance the life and work is.
 
-<<<<<<< HEAD
 The keyword of this week is  **CI**, **Maven**, **Specification by Example** ,**Refactor and Testing**. Let me declare these word one by one.
  
 CI, which is the abbreviation of Continuous Integration. I first touched CI is in the book--[Continuous Delivery](http://book.douban.com/subject/6862062/ "Continuous Delivery: Reliable Software Releases through Build, Test, and Deploy")
@@ -29,5 +28,3 @@ Refactor. Similar to CI,I firstly knew the Refactor because of this book-[Refact
  
 Testing. Johan gave us a brief introduction about the principle of the testing and testing methodology. His little Swedish accent English let me recalled my time that  I was an Exchange Student in Finland J .
 Although there is no much new knowledge to me, it indeed help me review the testing theory that I was  told by my school teacher.
-=======
->>>>>>> 8943b2591ec9d42667e61e83b71f55732d150f32
