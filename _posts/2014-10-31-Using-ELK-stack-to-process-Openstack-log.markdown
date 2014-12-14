@@ -76,7 +76,7 @@ Here we use docker to run ELK stack.You can check this [post](http://datapsyche.
 ###Logstash workflow
 
 	|---------|         |----------|       |----------|
-	|  Input  | ------>|  Filter  |------>|  Output  |
+	|  Input  |  ------>|  Filter  |------>|  Output  |
 	|---------|         |----------|       |----------|
 
 Inputs, Outputs and Filters are at the heart of the Logstash configuration. Logstash process pipeline with 3 stages: inputs -> filters -> outputs. In a word, Inputs *generate* events, filters *modify* them, outputs *ship* them elsewhere. If you wan to know the detail about the life of an event, check this [document](http://logstash.net/docs/1.4.2/life-of-an-event).
