@@ -26,18 +26,18 @@ WebDriverAPI->WebDriverSPI->JSONWireProtocol->SeleniumServer
 
 ###maven pom dependency
 
-
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>2.44.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>2.44.0</version>
-		</dependency>
-
+{% highlight xml %}
+<dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-java</artifactId>
+	<version>2.44.0</version>
+</dependency>
+<dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-server</artifactId>
+	<version>2.44.0</version>
+</dependency>
+{% endhighlight %}
 
 ###Fetch WebDriver
 
@@ -50,13 +50,13 @@ Firefox Driver does not require a download as it is bundled with the Java client
 
 Maintain the element position code is pretty tricky. Especially, if you use process pattern to write these tests, you might spread these statement into different test cases, it will be a nightmare to maintain, once the element position varied.Intuitively, What about the elements position codes are encapsulated in one class which represent the page it attached? Here, we introduced the **Page Object** design pattern.  Applying this pattern, the testing code will be maintainable and cooperate with  [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) creating your own DSL so that people can see intent. For example, the following code will carry out *Log in* action.
 
-```java
+{% highlight java %}
 
 logInPage.typeUserName("username")
-		 .typePassword("123")
-		 .clickLogInBtn();
+	 .typePassword("123")
+	 .clickLogInBtn();
 
-```
+{% endhighlight %}
 
 In **src/main/java** directory,  Page Objects are suggested to be put. Test cases are put in **src/test/java** as usual.
 
