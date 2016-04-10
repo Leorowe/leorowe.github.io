@@ -11,17 +11,6 @@ Selenium contains many tools that help us to test our application. The most famo
 
 Compared with its sibling( Selenium RC and Selenium IDE) , WebDriver is control the browser from the outside the browser. The technical mechanism under the hood is to  uses accessibility API to driver the browser. If we look at Firefox, it uses JavaScript to access the API. If we look at Internet Explorer, it uses C++. Because of that, It won't restricted by sandbox mechanism that introduced by browsers for the sake of safety. However, the downside  is obvious. It will not support new browser but Selenium RC which use web lingua france——JavaScript will . More information about Selenium WebDriver could be found in [here](http://docs.seleniumhq.org/projects/webdriver/).
 
-```flow
-
-WebDriverAPI=>operation: WebDriver API
-WebDriverSPI=>operation: WebDriver SPI
-JSONWireProtocol=>operation: JSON Wire Protocol
-SeleniumServer=>operation: Selenium Server
-
-WebDriverAPI->WebDriverSPI->JSONWireProtocol->SeleniumServer
-
-```
-
 ##Development Environment
 
 ###maven pom dependency
