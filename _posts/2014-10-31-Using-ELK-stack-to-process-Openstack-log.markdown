@@ -5,7 +5,7 @@ date: 2014-10-31 22:51:49
 categories: IT
 ---
 
-##introduction to ELK
+## introduction to ELK
 
 ELK is the abbreviation of Elasticsearch, Logstash and Kibana.
 As you can see, Here using 4 complementary applications, the role of each one being :
@@ -15,9 +15,9 @@ As you can see, Here using 4 complementary applications, the role of each one be
  - ElascticSearch: store the data that logstash processed and provide full-text index
  - Kibana: provide a friendly web console for user to interact with elasticsearch.
 
-##Logstash-forwarder 
+## Logstash-forwarder 
 
-###Build from source 
+### Build from source 
   1. Install [go](https://golang.org/doc/install) environment
   2. Compile [logstash-forwarder](https://github.com/elasticsearch/logstash-forwarder#building-it)
   3. Generating an ssl certificate
@@ -52,7 +52,7 @@ As you can see, Here using 4 complementary applications, the role of each one be
  5.  Boot up Logstash-forwarder
       `logstash-forwarder -config logstash-forwarder.conf`
 
-###Install from RPM
+### Install from RPM ###
 If you have build a native packages of logstash-forwarder, you could use `yum` to install it directly.
 
  1. Upload rpm to the machine
@@ -145,14 +145,14 @@ The following is the logstash configuration file:
   - program: \-
   - content: Configuring auth_uri to point to the public identity endpoint is required; clients may not be able to authenticate against an admin endpoint
 
-###Configure Kibana
+### Configure Kibana
 
-####change the [elasticsearch port](http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html#using-kibana-for-the-first-time)
+#### change the [elasticsearch port](http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html#using-kibana-for-the-first-time)
 The Kibana configuration file is in `/usr/share/nginx/html/config.js`. Find the filed `elasticsearch` and modify the port to what you want. 
 
-####10 minute[ walk through](http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html#using-kibana-for-the-first-time)
+#### 10 minute[ walk through](http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html#using-kibana-for-the-first-time)
 
-###Administer ElasticSearch
+### Administer ElasticSearch
 
  - debug what data have been stored in ElasticSearch
    `curl 'http://localhost:9200/_search?pretty'`

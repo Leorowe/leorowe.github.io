@@ -5,15 +5,15 @@ date: 2014-12-14 11:04:24
 categories: IT ELK
 ---
 
-##Selenium WebDriver Introduction
+## Selenium WebDriver Introduction
 
 Selenium contains many tools that help us to test our application. The most famous is Selenium IDE, which is a firefox plugin-in. Using that is easy in the first glance, it record your actions as scripts and play it later, however, the maintenance is disaster. Selenium RC is another tools, which  boot a proxy to intercept the request that we sent and inject JavaScript to page to action certain movement. it was written purely in JavaScript for all the browser automation. The JavaScript, in Selenium RC, would then emulate user actions. This JavaScript would automate the browser from within the browser.
 
 Compared with its sibling( Selenium RC and Selenium IDE) , WebDriver is control the browser from the outside the browser. The technical mechanism under the hood is to  uses accessibility API to driver the browser. If we look at Firefox, it uses JavaScript to access the API. If we look at Internet Explorer, it uses C++. Because of that, It won't restricted by sandbox mechanism that introduced by browsers for the sake of safety. However, the downside  is obvious. It will not support new browser but Selenium RC which use web lingua france——JavaScript will . More information about Selenium WebDriver could be found in [here](http://docs.seleniumhq.org/projects/webdriver/).
 
-##Development Environment
+## Development Environment 
 
-###maven pom dependency
+### maven pom dependency
 
 {% highlight xml %}
 <dependency>
@@ -28,11 +28,11 @@ Compared with its sibling( Selenium RC and Selenium IDE) , WebDriver is control 
 </dependency>
 {% endhighlight %}
 
-###Fetch WebDriver
+### Fetch WebDriver
 
 Firefox Driver does not require a download as it is bundled with the Java client bindings. However, Chrome WebDriver need to be download explicitly. The download URL is in here [this](https://sites.google.com/a/chromium.org/chromedriver/downloads)(if it is invalid, please google `chrome webdriver`).
 
-##Page Object Pattern
+## Page Object Pattern
 
 > A good thing about higher level testing like this, is that the tests will be pretty resilient to changes in your code. As long as the elements rendered on a page, and the routing stays the same, if you change the underlying implementation one day, your E2E tests should still pass.        
 > ---- [Andy Shora](http://andyshora.com/unit-testing-best-practices-angularjs.html)
@@ -49,7 +49,7 @@ logInPage.typeUserName("username")
 
 In **src/main/java** directory,  Page Objects are suggested to be put. Test cases are put in **src/test/java** as usual.
 
-##Workflow
+## Workflow
 
  1. prerequisite configuration (*src/main/resources/*)
  2. create a page object (if not exist)
@@ -58,7 +58,7 @@ In **src/main/java** directory,  Page Objects are suggested to be put. Test case
  5. write test cases in *src/test/main* with junit.
  6. run the test, debug and tweak code.
 
-##Waiting Elements to appear
+## Waiting Elements to appear
 
 if target project is developed by SPA, which heavily rely on ajax to interact with server. So even if the whole page have load completely, elements can happen asynchronously so we never know when they will appear.
 
@@ -69,10 +69,10 @@ if target project is developed by SPA, which heavily rely on ajax to interact wi
 
 >An implicit wait is to tell WebDriver to poll the DOM for a certain amount of time when trying to find an element or elements if they are not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object instance.
 
-##Exception Handler
+## Exception Handler
 Exceptions are unavoidable, but some handy tools provided by selenium will help us debug and tweak our test code. There is a screen snapshot helper function in `SeleniumHelp` class. You could put this method in catch block to capture picture when the code crashed. 
 
-##Reference
+## Reference
 ----------------------------------------
 1. [Selenium 2 Testing Tools](https://www.packtpub.com/web-development/selenium-2-testing-tools-beginner%E2%80%99s-guide)
 2. [Selenium WebDriver Documentation](http://docs.seleniumhq.org/projects/webdriver/)

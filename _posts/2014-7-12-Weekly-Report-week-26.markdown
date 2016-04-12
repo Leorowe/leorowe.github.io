@@ -5,7 +5,7 @@ date: 2014-7-12 10:36:32
 categories: Weekly Report
 ---
 
-###This week:Second week of working in Ericsson.
+This week:Second week of working in Ericsson.
 
 Before I join Ericsson,I never thought that I would choosed a communication enterprise to begin my career.After all, my origin aiming is to be a Front-End developer in certain ".com" company. Now I realize how naive I am.
 
