@@ -73,7 +73,7 @@ Here we use docker to run ELK stack.You can check this [post](http://datapsyche.
 
 `docker run -d -p 80:80 -p 3333:3333 -p 3334:3334 -p 9200:9200 cyberabis/docker-elkauto /elk_start.sh`
 
-###Logstash workflow
+### Logstash workflow
 
 	|---------|         |----------|       |----------|
 	|  Input  |  ------>|  Filter  |------>|  Output  |
