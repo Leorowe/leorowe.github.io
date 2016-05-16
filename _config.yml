@@ -10,7 +10,6 @@ github_username:  Leorowe
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: pygments
 excerpt_separator: "\n\n"
 
 #set encode
