@@ -6,7 +6,7 @@ baseurl: ""
 url: "http://weibo.com/leorowe"
 twitter_username: leorowe_wei
 github_username:  Leorowe
-
+timezone:   Asia/Shanghai
 # Build settings
 markdown: kramdown
 permalink: pretty
