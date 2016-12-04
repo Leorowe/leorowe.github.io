@@ -11,7 +11,7 @@ Shell is simple but not esay. If you don't wanto to leave spaghetti to others, y
 
 It's not a good idea to print the log to STD_IN, so we need archive these log into a log file.
 
-{% highlight xml %}
+{% highlight shell %}
 log()
 {
     local level=$1
@@ -24,7 +24,7 @@ log()
 
 Log file will become very large if you don't carefully treat it. It's wise to archive the log by the date.
 
-{% highlight xml %}
+{% highlight shell %}
 
 init_log_file()
 {
@@ -40,4 +40,34 @@ init_log_file()
     fi
 }
 
+{% endhighlight %}
+
+
+Return 503 error from Nginx randomly
+
+{% highlight shell %}
+#/bin/bash
+while true
+do
+sleep 2;
+grep 'return 503' /usr/local/nginx/conf/nginx.conf >/dev/null
+if [ $? == 0 ]
+then
+  echo ' remvoe  503'
+  sed -i '/return 503/d' /usr/local/nginx/conf/nginx.conf
+else
+  i=$((RANDOM%9+1))
+  echo 'fail at server 1800'$i
+  sed '/1800'$i';/a \\t return 503;' -i /usr/local/nginx/conf/nginx.conf
+fi
+
+
+nginx -t
+if [ $? == 0 ]
+then
+  nginx -s reload
+else
+  echo 'no'
+fi
+done
 {% endhighlight %}

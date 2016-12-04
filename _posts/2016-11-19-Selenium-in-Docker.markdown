@@ -11,6 +11,8 @@ categories: Selenium Docker
 
 # Docker的出现
 访问Docker 的首页，首先映入你眼帘的是DockerStyle 模式。
+
 >Build, Ship, Run
+
 使用Docker 你可以保证本地和CI 的环境一致，大大减低集成难度和调试成本。
 而且可以很方便的扩展到多台机器。
